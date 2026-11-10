@@ -1,0 +1,15 @@
+{
+    "folders": [
+		{
+			"name": "portfolio_penelope_perret",
+			"path": "."
+		},
+		{
+			"name": "material",
+			"path": "material"
+		}
+	],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "portfolio_penelope_perret"
+    }
+}

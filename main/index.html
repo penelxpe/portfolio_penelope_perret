@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="absolute_main.css">
+
+
+    <script src="/libraries/p5.min.js"></script>
+    <script src="/libraries/p5.sound.min.js"></script>
+</head>
+
+<body>
+    <script src="sketch.js"></script>
+
+
+
+
+
+    <div class="videointro-container">
+        <video class="videointro" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="/material/main_material/intro-poster.jpg">
+            <source src="/material/main_material/intro-safari.mp4" type="video/mp4">
+        </video>
+    </div>
+    <script>
+        const introVideo = document.querySelector(".videointro");
+
+        function playIntro() {
+            introVideo.muted = true;
+            introVideo.defaultMuted = true;
+            introVideo.removeAttribute("controls");
+            introVideo.play().then(() => {
+                introVideo.classList.remove("autoplay-blocked");
+            }).catch((error) => {
+                introVideo.classList.add("autoplay-blocked");
+                if (!introVideo.dataset.autoplayWarningShown) {
+                    console.warn("Intro video autoplay was blocked by the browser.", error);
+                    introVideo.dataset.autoplayWarningShown = "true";
+                }
+            });
+        }
+
+        introVideo.addEventListener("canplay", playIntro, {
+            once: true
+        });
+        document.addEventListener("visibilitychange", () => {
+            if (!document.hidden && introVideo.paused) {
+                playIntro();
+            }
+        });
+        playIntro();
+    </script>
+    <div class="flex-container_homepage">
+        <h2>
+            <!-- Invasive Arten -->
+            <a href="/p1_invasive_arten/index_p1.html">
+                <div class="item invasive">
+
+                    <video class="background-video" autoplay muted loop playsinline preload="auto">
+            <source src="/material/invasive_arten/teaser_invasive_arten.mp4" type="video/mp4">
+        </video>
+
+                    <div class="item-content">
+
+                        <span class="default-text">Invasive Arten</span>
+
+                        <div class="hover-text">
+                            Motion Design </span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </a>
+            <!-- Brand Identity -->
+            <a href="/p2_brand_identity/index.html">
+                <div class="item invasive">
+                    <video class="background-video" autoplay muted loop playsinline preload="auto">
+            <source src="/material/brand_identity/mouse.mp4" type="video/mp4">
+        </video>
+
+                    <div class="item-content">
+                        <span class="default-text">Lullin & Ferrari</span>
+                        <div class="hover-text">Brand Identity</span>
+
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- LVF -->
+            <div class="item invasive">
+                <video class="background-video" autoplay muted loop playsinline preload="auto">
+            <source src="/material/lvf/cloth_close_up_background.mp4" type="video/mp4">
+        </video>
+                <a href="/p3_lvf/index.html">
+                    <div class="item-content">
+                        <span class="default-text">LVF</span>
+                        <span class="hover-text">Animation</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Szenographie -->
+            <a href="/p4_spinnenarten/index.html">
+                <div class="item invasive">
+                    <video class="background-video" autoplay muted loop playsinline preload="auto">
+                <source src="/material/szeno/szeno_spinne.mp4" type="video/mp4">
+            </video>
+
+                    <div class="item-content">
+                        <div class="szeno">
+                            <span class="default-text">Welche Spinne spinnt wie?</span> </div>
+                        <span class="hover-text">Szenografie/3D Animation</span>
+                    </div>
+                </div>
+
+                <a/>
+                <!-- social media -->
+                <div class="item invasive">
+                    <img class="background-video" src="/material/bb/bb.jpg" alt="bouncy bongi">
+                    </img>
+
+                    <div class="item-content">
+                        <span class="default-text">Bouncy Bongi</span>
+                        <span class="hover-text">social media</span>
+                    </div>
+                </div>
+    </div>
+
+    </h2>
+    </div>
+
+</body>
+
+</html>
