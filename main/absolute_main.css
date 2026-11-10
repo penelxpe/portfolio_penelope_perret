@@ -6,7 +6,6 @@
         h1 {
             font-family: 'Titillium Web', sans-serif;
             font-size: 5.5rem;
-            text-align: left;
             margin-top: 2%;
             color: rgb(255, 0, 191)
         }
@@ -21,24 +20,18 @@
         h3 {
             font-family: 'Titillium Web', sans-serif;
             font-size: 1.5rem;
-            text-align: left;
             color: rgb(255, 0, 191)
         }
         
         h4 {
             font-family: 'Titillium Web', sans-serif;
             font-size: 1 rem;
-            text-align: left;
             margin-top: 2%;
             color: rgb(255, 0, 191)
         }
         
-        .div2 h2 {
-            margin-bottom: 0;
-        }
-        
         .description_projects {
-            align-items: left;
+            align-items: center;
             background-color: rgba(252, 254, 255, 0.53);
             color: rgb(174, 173, 173);
             font-size: 1.5rem;
@@ -63,4 +56,18 @@
             display: block;
             width: clamp(40px, 5vw, 64px);
             height: auto;
+        }
+
+        @media (max-width: 700px) {
+            .content-section .div2 {
+                width: 100%;
+                align-self: center;
+                text-align: center;
+            }
+
+            .content-section .div2 h2,
+            .content-section .div2 h3,
+            .content-section .div2 h4 {
+                text-align: center;
+            }
         }
