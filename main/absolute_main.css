@@ -12,7 +12,7 @@
         
         h2 {
             font-family: 'Titillium Web', sans-serif;
-            font-size: 5.5rem;
+            font-size: clamp(1.75rem, 3vw + 1rem, 5.5rem);
             text-align: center;
             color: rgb(255, 0, 191)
         }
@@ -42,32 +42,4 @@
         a:link {
             cursor: pointer;
             text-decoration: none;
-        }
-        
-        .project-back {
-            position: fixed;
-            right: 3%;
-            bottom: 3%;
-            z-index: 1000;
-            line-height: 0;
-        }
-        
-        .project-back img {
-            display: block;
-            width: clamp(40px, 5vw, 64px);
-            height: auto;
-        }
-
-        @media (max-width: 700px) {
-            .content-section .div2 {
-                width: 100%;
-                align-self: center;
-                text-align: center;
-            }
-
-            .content-section .div2 h2,
-            .content-section .div2 h3,
-            .content-section .div2 h4 {
-                text-align: center;
-            }
         }

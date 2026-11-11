@@ -55,6 +55,9 @@
     
     .item:hover {
         height: 300px;
+        width: 100%;
+        transform: scale(1.05);
+        transition: transform 0.4s ease;
     }
     
     .hover-text {
@@ -117,16 +120,7 @@
     }
     
     .szeno {
-        margin: 0;
+        margin: none;
         text-align: center;
-        border-left: 5%;
-    }
-    
-    .szeno .default-text {
-        display: block;
-        width: fit-content;
-        max-width: 100%;
-        margin: 3% auto;
-        font-size: clamp(1rem, 5vw, 5rem);
-        white-space: nowrap;
+        padding: none;
     }
