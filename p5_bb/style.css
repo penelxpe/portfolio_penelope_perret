@@ -1,0 +1,126 @@
+.preview {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    overflow: hidden;
+}
+
+.preview_img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+}
+
+
+/* GRID */
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    column-gap: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    height: fit-content;
+    row-gap: 10%;
+}
+
+.div1,
+.div4,
+.div5 {
+    width: 66.6667%;
+}
+
+.div1 {
+    align-self: flex-end;
+    text-align: right;
+}
+
+.div2 {
+    width: 66.6667%;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.div2 h2 {
+    text-align: left;
+}
+
+.artist-rider-gallery {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+    width: 100%;
+    align-self: flex-start;
+    overflow-x: auto;
+}
+
+.artist-rider-gallery img {
+    display: block;
+    width: calc(25% - 0.9375rem);
+    min-width: 220px;
+    height: auto;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(110px, 1fr));
+    gap: 1.25rem;
+    width: 100%;
+    align-self: flex-start;
+}
+
+.highlights img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.post {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+    width: 100%;
+    align-self: flex-start;
+    overflow-x: auto;
+}
+
+.post img {
+    display: block;
+    width: calc(25% - 0.9375rem);
+    min-width: 220px;
+    height: auto;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+
+.sticker {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+    width: 100%;
+    align-self: flex-start;
+    overflow-x: auto;
+}
+
+.sticker img {
+    display: block;
+    width: calc(25% - 0.9375rem);
+    min-width: 220px;
+    height: auto;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
